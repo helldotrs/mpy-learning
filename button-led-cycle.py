@@ -16,16 +16,21 @@ key_plus = pin15
 key_minus = pin14
 
 index = 0
+count = 0
 
 while True:
     if key_plus.value() == 1:
         # Increment the index when key_plus is pressed
         index = (index + 1) % len(leds)
+        count += 1
+        print(count)
         time.sleep(0.2)  # Add a small delay to debounce the button
 
     if key_minus.value() == 1:
         # Decrement the index when key_minus is pressed
         index = (index - 1) % len(leds)
+        count -= 1
+        print(count)
         time.sleep(0.2)  # Add a small delay to debounce the button
 
     # Turn off all LEDs
@@ -36,4 +41,3 @@ while True:
     leds[index].on()
 
     time.sleep(0.1)  # Adjust the delay based on your preference
-
