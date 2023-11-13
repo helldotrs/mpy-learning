@@ -1,3 +1,20 @@
+"""
+physical layout:
+    1: led :gnd
+    2: led :gnd
+    
+    4: led :gnd
+    5: led :gnd
+    6: led :gnd
+    
+    18:gnd
+    
+    19: button :plus
+    20: button :plus
+    ---
+    ---
+    37:plus
+"""
 from machine import Pin
 import time
 
